@@ -1,0 +1,37 @@
+{% extends './base.html' %}
+{% load static %}
+{% block contents %}
+<head>
+    <title>Chat App</title>
+    <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+</head>
+<div class="container">
+      <div class="theme-list">
+        <h2>Chat themes</h2>
+        {% for theme in themes %}
+          <div class="theme-item" >
+            <a href="{% url 'chatpage' theme.slug %}">{{ theme.Newchat }}</a>
+          </div>
+        {% endfor %}
+      </div>
+      <form action="." method="post">
+        <div class="back">
+          <div class="form_theme"> 
+          {% csrf_token%}
+          <p>{{form_theme.as_p}}</p>
+          </div>
+          <div class="form_button">
+            <button class="button is-danger">Send</button>
+          </div>
+        </div>
+      </form>
+      <div class="chat-app-description">
+        <h1>Welcome to the Chat App!</h1>
+        <p> This chat app utilizes OpenAI's API to facilitate conversational features similar to chatGPT.
+          ChatGPT is a state-of-the-art language model developed by OpenAI that can generate human-like responses based on given messages. 
+          Start a conversation by adding a new chat theme and selecting a chat theme from the list on the left.
+           Once you select a theme, you'll be taken to a chat page where you can interact with ChatGPT and see its responses. 
+           Have fun exploring the possibilities of AI-powered chat!</p>
+      </div>        
+</div>
+{% endblock %}

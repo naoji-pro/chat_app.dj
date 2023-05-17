@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f1f1f1;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height: 95%;
+    width: 95%;
+    position: relative;
+}
+.theme-list {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 750px;
+    width: 20%;
+    float: left;
+    overflow-y: scroll;
+}
+.theme-list h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.back{
+    padding: 10px;
+    border-radius: 5px;
+    display: block; 
+    margin-top: 350px;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+}
+.back button {
+    padding: 10px 30px;
+    background-color: yellowgreen;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.theme-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-item:hover {
+    background-color: #ddd;
+}
+.chat {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 750px; /* サイズの指定 */
+    width: 80%;
+    float: right;
+    overflow-y: scroll; /* 縦スクロールを表示する */
+}
+.message {
+    margin-bottom: 10px;
+}
+
+.message .sender {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.message .text {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 80%;
+    word-wrap: break-word;
+    line-height: 1.5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.message .text:last-child {
+    margin-bottom: 0;
+}
+
+.message .timestamp {
+    font-size: 12px;
+    color: #999;
+    margin-left: 10px;
+}
+
+.message.right .text {
+    background-color: #dcf8c6;
+    text-align: right;
+}
+
+.message.right .timestamp {
+    margin-left: 0;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.message.right .sender {
+    text-align: right;
+}
+.form {
+    display: flex;
+    margin: 20px;
+    width: 77%;
+}
+
+.form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	margin-right: 10px;
+	box-sizing: border-box;
+}
+.form button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #3e8e41;
+}
+
