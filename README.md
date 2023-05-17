@@ -1,0 +1,6 @@
+# chat_app.dj
+OpenAIのAPIとPythonのWebアプリ用のフレームワークであるDjangoを使って、chatGPTのようなAIとチャットが出来るWebアプリを作りました。
+Newchatにチャットテーマを追加して、AIとの会話をお楽しみください。
+利用するには、OpenAIのAPIキーを取得し、views.pyの該当部分に追加してください。
+
+参考にしたものは、naoji-proのrec_movie.djです。
